@@ -1,0 +1,202 @@
+
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+.title:hover {
+
+    border: 1.5px, solid, white;
+    height: 75px;
+    transition: background-color 0.35s ease-in-out;
+     background-color: rgb(135, 117, 252) ;
+}
+
+
+#container:hover {
+
+    border: 1.5px, solid, yellow;
+    height: 55px;
+    opacity: 2;
+    transition: color 0.1s ease-in-out;
+    color: yellow;
+    background-color: rgb(135, 117, 252) ;
+   transition: background-color 0.65s ease-in-out;
+    
+}
+
+
+
+#bg {
+
+   background-color: #18261F;
+   
+    
+}
+
+#navbar {
+
+   background-color: black;
+   color: white;
+   display: flex;
+   align-items: center;
+   height: 82px;
+   width: 100%;
+    
+}
+
+#container {
+   
+   height: 55px;
+   width: 65vh;
+   border-radius: 15px;
+   background-color: rgba(255, 255, 255, 0.08);
+   margin-left: 100px;
+   margin-top: 45px;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   color: white;
+   border: 1.5px, solid, transparent;
+   
+   
+
+   
+
+
+}
+
+.img {
+
+    height: 575px ;
+    width: 1300px ;
+    margin-top: 15vh ;
+    
+}
+
+.title {
+   
+   width: 25vh;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 1.5px, solid, transparent;
+}
+
+.logo {
+
+   height: 82px;
+   width: 70px;
+
+}
+
+.sp {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+
+}
+
+#spotify {
+
+   margin-left: -65px;
+
+}
+
+.music {
+
+   height: 25px;
+   width: 75px;
+   background-color: #FF00FF;
+}
+
+.pic {
+
+height: 100px;
+width: 100px;
+margin-left: 1200px;
+
+
+}
+
+.bottom {
+
+ position: sticky;
+ height: 93px;
+ background-color: black;
+ margin-top: 45px;
+ width: 100%;
+ text-align: center;
+
+}
+
+.song_pic {
+
+   border-radius: 15px;
+   height: 55px;
+   width: 55px;
+}
+
+#ab {
+   background-color: green;
+}
+
+.bar {
+
+   width: 90vh;
+   position: center;
+   text-align: center;
+   margin-top: -50px;
+   margin-left: 178px;
+   cursor: pointer;
+   
+
+}
+
+#masterplay {
+
+text-align: center;
+margin-left: 0px;
+height: 20px;
+width: 20px;
+margin-top: 25px;
+
+
+}
+
+#blueprint {
+
+
+ width: 100%;
+ 
+
+
+}
+
+.bottom_icons {
+
+   
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   
+
+
+}
+
+.main {
+
+
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+
+}
+
+#gif_2 {
+
+   opacity: 0;
+   transition : opacity 0.4s ease-in-out;
+   
+}
