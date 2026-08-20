@@ -15,7 +15,7 @@ let valence_2 = document.getElementById('valence_2');
 
 
 
-let songs = [{song: "mortals" , filepath: "Warriyo, Rameses B - Mortals (Rameses B Remix) [NCS Release].mp3" },
+let songs = [{song: "mortals" , filepath: "mortals.mp3" },
              {song: "elec" , filepath: "elec.mp3" },
              {song: "cartoon" , filepath: "cartoon.mp3" },
              {song: "john" , filepath: "john.mp3" },
@@ -30,7 +30,7 @@ let songs = [{song: "mortals" , filepath: "Warriyo, Rameses B - Mortals (Rameses
  ];
 
  audioElement.src = songs[0].filepath ;
- audioElement.preload = "auto";
+ audioElement.preload = "metadata";
  let songIndex = 0;
 
 
