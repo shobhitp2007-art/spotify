@@ -216,3 +216,25 @@ margin-top: 25px;
    width: 100%;
    max-width: 520px; /* Centers the song cards on all screen sizes */
 }
+
+/* 1. Prevent mobile screens from scrolling horizontally */
+html, body, #bg {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* 2. Hide the top-right music GIF on phone screens to give the menu room */
+@media (max-width: 600px) {
+    .gif_1 {
+        display: none !important;
+    }
+}
+
+/* Keeps the GIF full-width without pushing the page off-screen */
+#gif_2 {
+    width: 100% !important;
+    margin-left: 0 !important;
+    height: 35px;
+    object-fit: cover; /* Prevents distortion while stretching wide */
+    display: block;
+}
