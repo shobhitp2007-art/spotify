@@ -32,7 +32,7 @@ let songs = [{song: "mortals" , filepath: "Warriyo, Rameses B - Mortals (Rameses
  ];
 
  audioElement.src = songs[0].filepath ;
- audioElement.preload = "metadata";
+ audioElement.preload = "auto";
  let songIndex = 0;
 
 
