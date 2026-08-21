@@ -235,7 +235,7 @@ html, body, #bg {
 #gif_2 {
     width: 100% !important;
     margin-left: 0 !important;
-    height: 35px;
+    height: 45px;
     object-fit: cover; /* Prevents distortion while stretching wide */
     display: block;
 }

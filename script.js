@@ -11,6 +11,8 @@ let elec_2 = document.getElementById('elec_2');
 let cartoon_2 = document.getElementById('cartoon_2');
 let john_2 = document.getElementById('john_2');
 let valence_2 = document.getElementById('valence_2');
+let previous = document.getElementById('a1');
+let next = document.getElementById('a3');
 
 
 
@@ -55,7 +57,7 @@ let songs = [{song: "mortals" , filepath: "Warriyo, Rameses B - Mortals (Rameses
      if(songIndex === 1) {
 
         elec.classList.remove('fa-play');
-     elec.classList.add('fa-pause');
+     elec.classList.add('fa-pause'); s
 
      }
 
@@ -543,7 +545,79 @@ valence_2.addEventListener('click', () => {
     
 
 
-})
+});
+
+let myProgressbar = document.querySelector(".bar");
+myProgressbar.value = 0;
+
+audioElement.addEventListener('timeupdate' , () => {
+
+     if(audioElement.duration && !isNaN(audioElement.duration)) {
+     let progress = parseInt(( audioElement.currentTime / audioElement.duration * 100 ));
+     myProgressbar.value = progress;
+
+     }
+
+
+
+});
+
+myProgressbar.addEventListener('input', () => {
+
+     if (audioElement.duration && !isNaN(audioElement.duration)) {
+audioElement.currentTime = (myProgressbar.value * audioElement.duration) / 100;
+     }
+
+
+});
+ 
+
+ 
+const makeAllPlays = () => {
+    document.querySelectorAll('.section i').forEach((element) => {
+        element.classList.remove('fa-pause');
+        element.classList.add('fa-play');
+    });
+};
+
+
+const playSelectedSong = () => {
+    audioElement.src = songs[songIndex].filepath;
+    audioElement.currentTime = 0;
+    audioElement.play();
+
+    // Sync master control bar
+    masterplay.classList.remove('fa-play');
+    masterplay.classList.add('fa-pause');
+    gif_2.style.opacity = 1;
+
+    // Sync track list icons
+    makeAllPlays();
+    let currentIcon = document.getElementById(songs[songIndex].song);
+    if (currentIcon) {
+        currentIcon.classList.remove('fa-play');
+        currentIcon.classList.add('fa-pause');
+    }
+};
+
+
+next.addEventListener('click', () => {
+    if (songIndex >= songs.length - 1) {
+        songIndex = 0; // Wrap to first song
+    } else {
+        songIndex += 1;
+    }
+    playSelectedSong();
+});
+
+previous.addEventListener('click', () => {
+    if (songIndex <= 0) {
+        songIndex = songs.length - 1; 
+    } else {
+        songIndex -= 1;
+    }
+    playSelectedSong();
+});
 
 
 
